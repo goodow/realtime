@@ -1,0 +1,9 @@
+[submodule "GDRealtime"]
+        path = GDRealtime
+        url = https://github.com/goodow/GDReatime.git
+[submodule "realtime-model"]
+        path = realtime-model
+        url = https://github.com/goodow/realtime-model.git
+[submodule "realtime-server"]
+	path = realtime-server
+	url = https://github.com/goodow/realtime-server.git
