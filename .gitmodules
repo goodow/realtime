@@ -4,6 +4,12 @@
 [submodule "realtime-model"]
         path = realtime-model
         url = https://github.com/goodow/realtime-model.git
+[submodule "realtime-channel"]
+        path = realtime-channel
+        url = https://github.com/goodow/realtime-channel.git
 [submodule "realtime-server"]
 	path = realtime-server
 	url = https://github.com/goodow/realtime-server.git
+[submodule "gwt/trunk"]
+	path = gwt/trunk
+	url = https://github.com/goodow/gwt.git

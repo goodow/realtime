@@ -21,16 +21,16 @@
     
     <guice.version>3.0</guice.version>
     <gwt.version>2.5.1</gwt.version>
-    <gae.version>1.7.7.1</gae.version>
+    <gae.version>1.8.0</gae.version>
   </properties>
   
   <dependencyManagement>
     <dependencies>
       <!-- Google Web Toolkit (GWT) -->
       <dependency>
-        <groupId>com.google.gwt</groupId>
+        <groupId>com.goodow.gwt</groupId>
         <artifactId>gwt-elemental</artifactId>
-        <version>${gwt.version}</version>
+        <version>${gwt.version}-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>com.google.gwt</groupId>
@@ -44,6 +44,34 @@
         <version>${gwt.version}</version>
         <scope>provided</scope>
       </dependency>
+      <dependency>
+        <groupId>com.goodow.gwt</groupId>
+        <artifactId>gwt-exporter</artifactId>
+        <version>${gwt.version}-SNAPSHOT</version>
+        <scope>provided</scope>
+      </dependency>
+      
+      <!-- Guice -->
+      <dependency>
+        <groupId>com.google.inject.extensions</groupId>
+        <artifactId>guice-servlet</artifactId>
+        <version>${guice.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.inject.extensions</groupId>
+        <artifactId>guice-multibindings</artifactId>
+        <version>${guice.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.inject.extensions</groupId>
+        <artifactId>guice-assistedinject</artifactId>
+        <version>${guice.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.inject.extensions</groupId>
+        <artifactId>guice-persist</artifactId>
+        <version>${guice.version}</version>
+      </dependency>
       
       <!-- Google App Engine Compile/runtime dependencies -->
       <dependency>
@@ -54,6 +82,11 @@
       <dependency>
         <groupId>com.google.appengine</groupId>
         <artifactId>appengine-api-labs</artifactId>
+        <version>${gae.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.appengine</groupId>
+        <artifactId>appengine-endpoints</artifactId>
         <version>${gae.version}</version>
       </dependency>
       <!-- Google App Engine Test Dependencies -->
@@ -165,6 +198,7 @@
   
   <modules>
     <module>realtime-model</module>
+    <module>realtime-channel</module>
     <module>realtime-server</module>
   </modules>
 </project>
