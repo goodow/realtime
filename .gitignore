@@ -8,3 +8,6 @@ target/
 
 # Created by OS.
 .DS_Store
+
+gwt/tools/
+datanucleus.log
