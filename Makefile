@@ -6,7 +6,7 @@ MAKE = $(XCRUN) make
 GDREALTIME_DIR = GDRealtime
 GEN_INCLUDE_DIR = $(GDREALTIME_DIR)/Classes/generated/include
 
-default: clean translate
+default: clean translate test
 
 translate: $(GEN_INCLUDE_DIR) elemental model channel
 
@@ -14,10 +14,13 @@ elemental:
 	@cd gwt/trunk/elemental && $(MAKE) translate
 
 model:
-	@cd realtime-model && $(MAKE) translate pod_update test
+	@cd realtime-model && $(MAKE) translate
 
 channel:
-	@cd realtime-channel && $(MAKE) translate pod_update
+	@cd realtime-channel && $(MAKE) translate
+
+test:
+	@cd realtime-model && $(MAKE) pod_update test  
 
 $(GEN_INCLUDE_DIR):
 	@mkdir -p $(GEN_INCLUDE_DIR)
