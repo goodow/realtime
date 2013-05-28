@@ -5,6 +5,8 @@ Google Docs–style collaboration via the use of operational transforms
 
 
 You may need to put this in your pom.xml:
+
+```xml
 <repository>
   <id>goodow-android</id>
   <name>Goodow Android Maven Repository</name>
@@ -13,3 +15,4 @@ You may need to put this in your pom.xml:
     <enabled>false</enabled>
   </snapshots>
 </repository>
+```
