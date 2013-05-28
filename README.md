@@ -12,7 +12,7 @@ You may need to put this in your pom.xml:
   <name>Goodow Android Maven Repository</name>
   <url>https://raw.github.com/goodow/maven/master/repositories/android/</url>
   <snapshots>
-    <enabled>false</enabled>
+    <enabled>true</enabled>
   </snapshots>
 </repository>
 ```
