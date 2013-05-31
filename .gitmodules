@@ -10,6 +10,12 @@
 [submodule "realtime-server"]
 	path = realtime-server
 	url = https://github.com/goodow/realtime-server.git
+[submodule "realtime-android"]
+	path = realtime-android
+	url = https://github.com/goodow/realtime-android.git
+[submodule "realtime-android-playground"]
+	path = realtime-android-playground
+	url = https://github.com/goodow/realtime-android-playground.git
 [submodule "gwt/trunk"]
-	path = gwt/trunk
-	url = https://github.com/goodow/gwt.git
+        path = gwt/trunk
+        url = https://github.com/goodow/gwt.git

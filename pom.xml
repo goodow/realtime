@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
@@ -22,6 +23,8 @@
     <guice.version>3.0</guice.version>
     <gwt.version>2.5.1</gwt.version>
     <gae.version>1.8.0</gae.version>
+    <android.platform.version>4.1.1.4</android.platform.version>
+    <google.apis.version>1.15.0-rc</google.apis.version>
   </properties>
   
   <dependencyManagement>
@@ -114,6 +117,16 @@
         <artifactId>gson</artifactId>
         <version>2.2.2</version>
       </dependency>
+      <dependency>
+        <groupId>com.google.api-client</groupId>
+        <artifactId>google-api-client</artifactId>
+        <version>${google.apis.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.http-client</groupId>
+        <artifactId>google-http-client</artifactId>
+        <version>${google.apis.version}</version>
+      </dependency>
       
       <!-- Servlet -->
       <dependency>
@@ -145,6 +158,24 @@
         <groupId>com.google.code.findbugs</groupId>
         <artifactId>jsr305</artifactId>
         <version>2.0.1</version>
+      </dependency>
+      
+      <!-- Android -->
+      <dependency>
+        <groupId>com.google.android</groupId>
+        <artifactId>android</artifactId>
+        <version>${android.platform.version}</version>
+        <scope>provided</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>xpp3</groupId>
+            <artifactId>xpp3</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+          </exclusion>
+        </exclusions>
       </dependency>
       
       <!-- Unit tests -->
@@ -192,6 +223,12 @@
           <artifactId>maven-resources-plugin</artifactId>
           <version>2.6</version>
         </plugin>
+        <plugin>
+          <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+          <artifactId>android-maven-plugin</artifactId>
+          <version>3.6.0</version>
+          <extensions>true</extensions>
+        </plugin>
       </plugins>    
     </pluginManagement>
   </build>
@@ -199,6 +236,8 @@
   <modules>
     <module>realtime-model</module>
     <module>realtime-channel</module>
+    <module>realtime-android</module>
+    <module>realtime-android-playground</module>
     <module>realtime-server</module>
   </modules>
 </project>
