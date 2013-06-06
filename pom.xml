@@ -245,8 +245,9 @@
   </build>
   
   <modules>
-    <module>realtime-model</module>
+    <module>realtime-operation</module>
     <module>realtime-channel</module>
+    <module>realtime-model</module>
     <module>realtime-android</module>
     <module>realtime-android-playground</module>
     <module>realtime-server</module>
