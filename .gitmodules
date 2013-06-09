@@ -13,6 +13,9 @@
 [submodule "realtime-server"]
 	path = realtime-server
 	url = https://github.com/goodow/realtime-server.git
+[submodule "realtime-web-playground"]
+        path = realtime-web-playground
+        url = https://github.com/goodow/realtime-web-playground.git
 [submodule "realtime-android"]
 	path = realtime-android
 	url = https://github.com/goodow/realtime-android.git

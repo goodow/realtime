@@ -250,6 +250,7 @@
     <module>realtime-model</module>
     <module>realtime-android</module>
     <module>realtime-android-playground</module>
+    <module>realtime-web-playground</module>
     <module>realtime-server</module>
   </modules>
 </project>
