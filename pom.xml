@@ -22,7 +22,7 @@
     
     <guice.version>3.0</guice.version>
     <gwt.version>2.5.1</gwt.version>
-    <gae.version>1.8.0</gae.version>
+    <gae.version>1.8.1</gae.version>
     <android.platform.version>4.1.1.4</android.platform.version>
     <google.apis.version>1.15.0-rc</google.apis.version>
   </properties>
