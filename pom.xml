@@ -22,7 +22,7 @@
     
     <guice.version>3.0</guice.version>
     <gwt.version>2.5.1</gwt.version>
-    <gae.version>1.8.1.1</gae.version>
+    <gae.version>1.8.3</gae.version>
     <android.platform.version>4.1.1.4</android.platform.version>
     <google.apis.version>1.15.0-rc</google.apis.version>
   </properties>
@@ -217,7 +217,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>2.5.1</version>
+          <version>3.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -243,7 +243,7 @@
         <plugin>
           <groupId>com.jayway.maven.plugins.android.generation2</groupId>
           <artifactId>android-maven-plugin</artifactId>
-          <version>3.6.0</version>
+          <version>3.6.1</version>
           <extensions>true</extensions>
         </plugin>
         <plugin>
@@ -260,8 +260,9 @@
     <module>realtime-channel</module>
     <module>realtime-model</module>
     <module>realtime-android</module>
-    <module>realtime-android-playground</module>
-    <module>realtime-web-playground</module>
     <module>realtime-server</module>
+    <module>realtime-web-playground</module>
+    <module>realtime-android-playground</module>
+    <module>realtime-server-appengine</module>
   </modules>
 </project>

@@ -25,3 +25,6 @@
 [submodule "gwt/trunk"]
         path = gwt/trunk
         url = https://github.com/goodow/gwt.git
+[submodule "realtime-server-appengine"]
+	path = realtime-server-appengine
+	url = https://github.com/goodow/realtime-server-appengine.git

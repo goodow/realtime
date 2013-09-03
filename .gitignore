@@ -5,6 +5,7 @@ target/
 .settings/
 .project
 .classpath
+.metadata/
 
 # Created by OS.
 .DS_Store
