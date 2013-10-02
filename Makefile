@@ -6,7 +6,7 @@ include resources/make/common.mk
 
 default: clean translate test
 
-translate: $(GEN_INCLUDE_DIR) elemental operation channel model
+translate: $(GEN_INCLUDE_DIR) elemental operation channel api
 
 elemental:
 	@cd gwt/trunk/elemental && $(MAKE) translate
@@ -17,13 +17,13 @@ operation:
 channel:
 	@cd realtime-channel && $(MAKE) translate
 
-model:
-	@cd realtime-model && $(MAKE) translate
+api:
+	@cd realtime-api && $(MAKE) translate
 
 test:
 	@cd gwt/trunk/elemental && $(MAKE) link
 	@cd realtime-operation && $(MAKE) test
-	@cd realtime-model && $(MAKE) pod_update test
+	@cd realtime-api && $(MAKE) pod_update test
 
 $(GEN_INCLUDE_DIR):
 	@mkdir -p $(GEN_INCLUDE_DIR)
@@ -33,4 +33,4 @@ clean:
 	@cd gwt/trunk/elemental && $(MAKE) clean
 	@cd realtime-operation && $(MAKE) clean
 	@cd realtime-channel && $(MAKE) clean
-	@cd realtime-model && $(MAKE) clean
+	@cd realtime-api && $(MAKE) clean

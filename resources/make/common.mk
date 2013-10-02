@@ -5,7 +5,7 @@ M2_REPO = $(HOME)/.m2/repository
 
 ROOT_DIR = $(dir $(lastword $(MAKEFILE_LIST)))../..
 MAIN_SRC_DIR = $(CURDIR)/src/main/java
-MAIN_SOURCE_LIST = $(BUILD_DIR)/java.sources.list
+MAIN_SOURCE_LIST = $(BUILD_DIR)/main.sources.list
 TEST_SOURCE_LIST = $(BUILD_DIR)/test.sources.list
 GEN_INCLUDE_DIR = $(GDREALTIME_DIR)/Classes/generated/include
 
@@ -14,16 +14,17 @@ ELEMENTAL_DIR = $(ROOT_DIR)/gwt/trunk/elemental
 ELEMENTAL_GEN_DIR = $(GDREALTIME_DIR)/Classes/generated/elemental
 OPERATION_GEN_DIR = $(GDREALTIME_DIR)/Classes/generated/operation
 CHANNEL_GEN_DIR = $(GDREALTIME_DIR)/Classes/generated/channel
-MODEL_GEN_DIR = $(GDREALTIME_DIR)/Classes/generated/model
-MODEL_DIR = $(ROOT_DIR)/realtime-model
+API_GEN_DIR = $(GDREALTIME_DIR)/Classes/generated/api
+API_DIR = $(ROOT_DIR)/realtime-api
 
 TEST_SRC_DIR = $(CURDIR)/src/test/java
+TEST_BIN = $(BUILD_DIR)/jre_unit_tests
 JUNIT_JAR = $(J2OBJC_DIST)/lib/junit-4.10.jar
 TEST_GEN_DIR = $(GDREALTIME_DIR)/Classes/test_generated
 
 OCNI_SRC_DIR = $(CURDIR)/src/main/objectivec
 
-J2OBJC = $(J2OBJC_DIST)/j2objc \
+J2OBJC = $(J2OBJC_DIST)/j2objc -use-arc \
   --prefixes $(ROOT_DIR)/resources/j2objc/package-prefixes.properties \
   --mapping $(ROOT_DIR)/resources/j2objc/method-mappings.properties
   
