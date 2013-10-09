@@ -1,0 +1,23 @@
+{
+  type : 'com.google.eclipse.mechanic.UriTaskProviderModel',
+  metadata : {
+    name: 'Workspace Mechanic Tasks',
+    description: 'Tasks for the Workspace Mechanic of Eclipse',
+    contact: 'i@goodow.com'
+  },  
+  tasks: [
+    'CodeStyle.epf',
+    'CompilerWarnings.epf',
+    'Css.epf',
+    'Encoding.epf',
+    'ImportOrganization.epf',
+    'Maven.epf',
+    'MembersSortOrder.epf',
+    'Navigate.epf',
+    'OutputFiltering.epf',
+    'RemoteSystems.epf',
+    'SaveActions.epf',
+    'Variables.epf',
+    'Xml.epf'
+  ]
+}

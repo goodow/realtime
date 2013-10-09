@@ -1,0 +1,22 @@
+# @title Encoding
+# @description Set the encoding to UTF-8
+# @audit_type RECONCILE
+#
+# Created by the Workspace Mechanic Preference Recorder
+#Sun Sep 05 12:40:52 CST 2010
+file_export_version=3.0
+
+# 文本文件编码
+/instance/org.eclipse.core.resources/encoding=UTF-8
+# 文本文件新行分隔符设为Unix风格
+# /instance/org.eclipse.core.runtime/line.separator=["\n"]
+
+# Java Properties文件编码
+/instance/org.eclipse.core.runtime/content-types/org.eclipse.jdt.core.javaProperties/charset=UTF-8
+
+# html文件编码
+/instance/org.eclipse.wst.html.core/outputCodeset=UTF-8
+/instance/org.eclipse.core.runtime/content-types/org.eclipse.wst.html.core.htmlsource/charset=UTF-8
+# css文件编码
+/instance/org.eclipse.wst.css.core/outputCodeset=UTF-8
+/instance/org.eclipse.core.runtime/content-types/org.eclipse.wst.css.core.csssource/charset=UTF-8

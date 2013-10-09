@@ -1,0 +1,11 @@
+# @title Maven
+# @description m2e settings
+# @audit_type LASTMOD
+#
+# Created by the Workspace Mechanic Preference Recorder
+#Sun Oct 30 14:34:28 CST 2011
+file_export_version=3.0
+/instance/org.eclipse.m2e.editor.xml/org.eclipse.m2e.editor.xml.templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+/instance/org.eclipse.m2e.core/eclipse.m2.defaultPomEditorPage=true
+/instance/org.eclipse.m2e.core/eclipse.m2.hideFoldersOfNestedProjects=true
+/instance/org.eclipse.m2e.core/eclipse.m2.globalUpdatePolicy=false
