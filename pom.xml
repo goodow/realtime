@@ -20,6 +20,10 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     
+    <!--Vertx module name-->
+    <vertx.module.name>${project.groupId}~${project.artifactId}~${project.version}</vertx.module.name>
+    <vertx.version>2.0.2-final</vertx.version>
+
     <guice.version>3.0</guice.version>
     <gwt.version>2.5.1</gwt.version>
     <gae.version>1.8.3</gae.version>
@@ -29,6 +33,41 @@
   
   <dependencyManagement>
     <dependencies>
+      <!-- Vert.x -->
+      <dependency>
+        <groupId>io.vertx</groupId>
+        <artifactId>vertx-core</artifactId>
+        <version>${vertx.version}</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>io.vertx</groupId>
+        <artifactId>vertx-platform</artifactId>
+        <version>${vertx.version}</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>io.vertx</groupId>
+        <artifactId>mod-web-server</artifactId>
+        <version>2.0.0-final</version>
+      </dependency>
+      <dependency>
+        <groupId>io.vertx</groupId>
+        <artifactId>mod-redis</artifactId>
+        <version>1.1.2-SNAPSHOT</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>io.vertx</groupId>
+        <artifactId>mod-redis-client</artifactId>
+        <version>1.1.2-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>com.netflix.rxjava</groupId>
+        <artifactId>rxjava-core</artifactId>
+        <version>0.14.2</version>
+      </dependency>
+      
       <!-- Google Web Toolkit (GWT) -->
       <dependency>
         <groupId>com.goodow.gwt</groupId>
@@ -215,12 +254,10 @@
     <pluginManagement>
       <plugins>
         <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.1</version>
         </plugin>
         <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
           <version>2.2</version>
           <configuration>
@@ -247,9 +284,22 @@
           <extensions>true</extensions>
         </plugin>
         <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-war-plugin</artifactId>
           <version>2.3</version>
+        </plugin>
+        <!-- The vert.x Maven plugin -->
+        <plugin>
+          <groupId>io.vertx</groupId>
+          <artifactId>vertx-maven-plugin</artifactId>
+          <version>2.0.0-final</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>2.7</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <version>2.4</version>
         </plugin>
       </plugins>
     </pluginManagement>
