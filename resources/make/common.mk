@@ -10,8 +10,6 @@ TEST_SOURCE_LIST = $(BUILD_DIR)/test.sources.list
 GEN_INCLUDE_DIR = $(GDREALTIME_DIR)/Classes/generated/include
 
 GDREALTIME_DIR = $(ROOT_DIR)/GDRealtime
-ELEMENTAL_DIR = $(ROOT_DIR)/gwt/trunk/elemental
-ELEMENTAL_GEN_DIR = $(GDREALTIME_DIR)/Classes/generated/elemental
 OPERATION_GEN_DIR = $(GDREALTIME_DIR)/Classes/generated/operation
 CHANNEL_GEN_DIR = $(GDREALTIME_DIR)/Classes/generated/channel
 API_GEN_DIR = $(GDREALTIME_DIR)/Classes/generated/api
