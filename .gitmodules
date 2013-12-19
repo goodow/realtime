@@ -1,30 +1,30 @@
-[submodule "GDRealtime"]
-        path = GDRealtime
-        url = https://github.com/goodow/GDReatime.git
+[submodule "realtime-json"]
+	path = realtime-json
+	url = https://github.com/goodow/realtime-json.git
 [submodule "realtime-operation"]
 	path = realtime-operation
 	url = https://github.com/goodow/realtime-operation.git
 [submodule "realtime-channel"]
         path = realtime-channel
         url = https://github.com/goodow/realtime-channel.git
+[submodule "realtime-api"]
+	path = realtime-api
+	url = https://github.com/goodow/realtime-api.git
 [submodule "realtime-server"]
 	path = realtime-server
 	url = https://github.com/goodow/realtime-server.git
-[submodule "realtime-web-playground"]
-        path = realtime-web-playground
-        url = https://github.com/goodow/realtime-web-playground.git
+[submodule "GDRealtime"]
+        path = GDRealtime
+        url = https://github.com/goodow/GDReatime.git
 [submodule "realtime-android"]
 	path = realtime-android
 	url = https://github.com/goodow/realtime-android.git
 [submodule "realtime-android-playground"]
 	path = realtime-android-playground
 	url = https://github.com/goodow/realtime-android-playground.git
-[submodule "gwt/trunk"]
-        path = gwt/trunk
-        url = https://github.com/goodow/gwt.git
+[submodule "realtime-web-playground"]
+        path = realtime-web-playground
+        url = https://github.com/goodow/realtime-web-playground.git
 [submodule "realtime-server-appengine"]
 	path = realtime-server-appengine
 	url = https://github.com/goodow/realtime-server-appengine.git
-[submodule "realtime-api"]
-	path = realtime-api
-	url = https://github.com/goodow/realtime-api.git

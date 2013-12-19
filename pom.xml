@@ -8,13 +8,13 @@
   </parent>
   <groupId>com.goodow.realtime</groupId>
   <artifactId>realtime-parent</artifactId>
-  <version>0.3.0</version>
+  <version>0.5.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <url>https://github.com/goodow/realtime/</url>
   <inceptionYear>2013</inceptionYear>
   <properties>
-    <maven.compiler.source>1.6</maven.compiler.source>
-    <maven.compiler.target>1.6</maven.compiler.target>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
     
     <!-- Don't let your Mac use a crazy non-standard encoding -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,13 +22,12 @@
     
     <!--Vertx module name-->
     <vertx.module.name>${project.groupId}~${project.artifactId}~${project.version}</vertx.module.name>
-    <vertx.version>2.1M1</vertx.version>
+    <vertx.version>2.1M2</vertx.version>
 
     <guice.version>4.0-beta</guice.version>
     <gwt.version>2.5.1</gwt.version>
     <gae.version>1.8.3</gae.version>
     <android.platform.version>4.1.1.4</android.platform.version>
-    <google.apis.version>1.17.0-rc</google.apis.version>
   </properties>
   
   <dependencyManagement>
@@ -79,15 +78,10 @@
       <dependency>
         <groupId>com.netflix.rxjava</groupId>
         <artifactId>rxjava-core</artifactId>
-        <version>0.14.9</version>
+        <version>0.15.1</version>
       </dependency>
       
       <!-- Google Web Toolkit (GWT) -->
-      <dependency>
-        <groupId>com.goodow.gwt</groupId>
-        <artifactId>gwt-elemental</artifactId>
-        <version>${gwt.version}-SNAPSHOT</version>
-      </dependency>
       <dependency>
         <groupId>com.google.gwt</groupId>
         <artifactId>gwt-user</artifactId>
@@ -174,7 +168,7 @@
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
-        <version>14.0.1</version>
+        <version>15.0</version>
       </dependency>
       <dependency>
         <groupId>com.google.code.gson</groupId>
@@ -182,52 +176,10 @@
         <version>2.2.2</version>
       </dependency>
       <dependency>
-        <groupId>com.google.api-client</groupId>
-        <artifactId>google-api-client</artifactId>
-        <version>${google.apis.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.google.http-client</groupId>
-        <artifactId>google-http-client</artifactId>
-        <version>${google.apis.version}</version>
-      </dependency>
-      <dependency>
         <groupId>com.google.javascript</groupId>
         <artifactId>closure-compiler</artifactId>
         <version>v20130603</version>
         <scope>provided</scope>
-      </dependency>
-      
-      <!-- Servlet -->
-      <dependency>
-        <groupId>javax.servlet</groupId>
-        <artifactId>servlet-api</artifactId>
-        <version>2.5</version>
-        <scope>provided</scope>
-      </dependency>
-      
-      <!-- Apache commons -->
-      <dependency>
-        <groupId>commons-codec</groupId>
-        <artifactId>commons-codec</artifactId>
-        <version>1.7</version>
-      </dependency>
-      <dependency>
-        <groupId>commons-cli</groupId>
-        <artifactId>commons-cli</artifactId>
-        <version>1.2</version>
-      </dependency>
-      
-      <!-- Miscellaneous -->
-      <dependency>
-        <groupId>joda-time</groupId>
-        <artifactId>joda-time</artifactId>
-        <version>2.1</version>
-      </dependency>
-      <dependency>
-        <groupId>com.google.code.findbugs</groupId>
-        <artifactId>jsr305</artifactId>
-        <version>2.0.1</version>
       </dependency>
       
       <!-- Android -->
@@ -294,7 +246,7 @@
         <plugin>
           <groupId>com.jayway.maven.plugins.android.generation2</groupId>
           <artifactId>android-maven-plugin</artifactId>
-          <version>3.6.1</version>
+          <version>3.8.0</version>
           <extensions>true</extensions>
         </plugin>
         <plugin>
@@ -320,6 +272,7 @@
   </build>
   
   <modules>
+    <module>realtime-json</module>
     <module>realtime-operation</module>
     <module>realtime-channel</module>
     <module>realtime-api</module>
