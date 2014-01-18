@@ -12,8 +12,8 @@ GEN_INCLUDE_DIR = $(GDREALTIME_DIR)/Classes/generated/include
 GDREALTIME_DIR = $(ROOT_DIR)/GDRealtime
 OPERATION_GEN_DIR = $(GDREALTIME_DIR)/Classes/generated/operation
 CHANNEL_GEN_DIR = $(GDREALTIME_DIR)/Classes/generated/channel
-API_GEN_DIR = $(GDREALTIME_DIR)/Classes/generated/api
-API_DIR = $(ROOT_DIR)/realtime-api
+STORE_GEN_DIR = $(GDREALTIME_DIR)/Classes/generated/store
+STORE_DIR = $(ROOT_DIR)/realtime-store
 
 TEST_SRC_DIR = $(CURDIR)/src/test/java
 TEST_BIN = $(BUILD_DIR)/jre_unit_tests
