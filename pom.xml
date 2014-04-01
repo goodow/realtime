@@ -25,9 +25,10 @@
     <!-- The directory where the module will be assembled - you can override this on the command line
     with -Dmods.directory=mydir -->
     <vertx.mods.directory>target/mods</vertx.mods.directory>
-    <vertx.version>2.1RC1</vertx.version>
+    <vertx.version>2.1RC3</vertx.version>
     <jackson.version>2.3.1</jackson.version>
     <guice.version>4.0-beta</guice.version>
+    <elasticsearch.version>1.1.1</elasticsearch.version>
     <gwt.version>2.5.1</gwt.version>
     <gae.version>1.8.3</gae.version>
     <android.platform.version>4.1.1.4</android.platform.version>
@@ -59,7 +60,7 @@
         <version>2.0.3-final</version>
         <scope>test</scope>
       </dependency>
-      <!-- Json and Xml -->
+      <!-- Json yaml and xml -->
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-core</artifactId>
@@ -69,6 +70,11 @@
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-databind</artifactId>
         <version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.dataformat</groupId>
+        <artifactId>jackson-dataformat-yaml</artifactId>
+        <version>2.1.3</version>
       </dependency>
       <dependency>
         <groupId>org.codehaus.woodstox</groupId>
@@ -99,7 +105,13 @@
       <dependency>
         <groupId>org.elasticsearch</groupId>
         <artifactId>elasticsearch</artifactId>
-        <version>1.0.1</version>
+        <version>${elasticsearch.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.goodow.vertx</groupId>
+        <artifactId>vertx-mod-elasticsearch</artifactId>
+        <version>${elasticsearch.version}</version>
+        <scope>provided</scope>
       </dependency>
       <!-- Redis -->
       <dependency>
@@ -112,12 +124,14 @@
         <groupId>io.vertx</groupId>
         <artifactId>mod-redis-client</artifactId>
         <version>1.1.3</version>
+        <scope>provided</scope>
       </dependency>
       <!-- RxJava -->
       <dependency>
         <groupId>io.vertx</groupId>
         <artifactId>mod-rxvertx</artifactId>
         <version>1.0.0-beta2</version>
+        <scope>provided</scope>
       </dependency>
       
       <!-- Google Web Toolkit (GWT) -->
@@ -176,6 +190,7 @@
         <groupId>com.goodow.vertx</groupId>
         <artifactId>mod-guice</artifactId>
         <version>1.0.0-beta1</version>
+        <scope>provided</scope>
       </dependency>
       
       <!-- Google App Engine Compile/runtime dependencies -->
@@ -226,16 +241,6 @@
         <artifactId>android</artifactId>
         <version>${android.platform.version}</version>
         <scope>provided</scope>
-        <exclusions>
-          <exclusion>
-            <groupId>xpp3</groupId>
-            <artifactId>xpp3</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-          </exclusion>
-        </exclusions>
       </dependency>
       
       <!-- Unit tests -->
@@ -258,8 +263,13 @@
     <pluginManagement>
       <plugins>
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>2.4</version>
         </plugin>
         <plugin>
           <artifactId>maven-source-plugin</artifactId>
@@ -295,7 +305,7 @@
         <plugin>
           <groupId>io.vertx</groupId>
           <artifactId>vertx-maven-plugin</artifactId>
-          <version>2.0.4-final</version>
+          <version>2.0.5-final</version>
           <!-- Make sure that the plugin uses the vert.x versions from this pom.xml not from its own pom.xml -->
           <dependencies>
             <dependency>
@@ -333,8 +343,9 @@
   <modules>
     <module>realtime-json</module>
     <module>realtime-channel</module>
-    <module>realtime-android</module>
+    <module>realtime-channel/realtime-android</module>
     <module>realtime-operation</module>
+    <module>realtime-search</module>
     <module>realtime-store</module>
     <module>realtime-web-playground</module>
     <module>realtime-android-playground</module>

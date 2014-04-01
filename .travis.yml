@@ -1,0 +1,10 @@
+language: java
+before_install: wget -P target/travis https://raw.githubusercontent.com/goodow/maven/master/settings.xml
+script: '[ ${TRAVIS_PULL_REQUEST} = ''false'' ]
+  && mvn clean deploy -pl :realtime-parent --settings target/travis/settings.xml
+  || mvn clean verify -pl :realtime-parent --settings target/travis/settings.xml'
+
+env:
+  global:
+    - secure: LO/mW57Yq3r2jBiTygfpVqfujowoVcujE+rdaLLwK8lR1iuNbPJqW4BIzeW0OymEshcMHjyta4z+VBwz8Nx0qPdXzB0tMj9J+G1ja3fb5K90aTzISx0maVuAoB5Ifmthe5BCKqb5cs85bPsMmedWX8LJr/7SlqBDowNm5tL5zNo=
+    - secure: mfUCwzZ0+iH221TcZ9oVVhZ/Xz2jhKzc+67vYeIJ9+/GEjYQ+E9GC+H4ptyOER+Szn9mlZvCQmvKqgytLU0UTMx3SuqJmN2SpBnDe0p22buwzASSO43eUH3ajg314/Rbd5tN/zmNP7mdR0/bKqW8lcqAG8gW5UyydkXOs2zsh4Y=

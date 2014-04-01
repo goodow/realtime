@@ -7,11 +7,10 @@ target/
 .classpath
 .metadata/
 
+mods/
+
 # Created by OS.
 .DS_Store
-
-gwt/tools/
-datanucleus.log
 
 # Generated for IntelliJ IDEA.
 .idea/

@@ -1,4 +1,4 @@
-realtime
+realtime [![Build Status](https://travis-ci.org/goodow/realtime.svg?branch=master)](https://travis-ci.org/goodow/realtime)
 ========
 
 Google Docs–style collaboration via the use of operational transforms
@@ -17,14 +17,6 @@ You may need to put this in your pom.xml or maven user settings.xml:
     </releases>
     <snapshots>
       <enabled>true</enabled>
-    </snapshots>
-  </repository>
-  <repository>
-    <id>goodow-realtime</id>
-    <name>Goodow Realtime Maven Repository</name>
-    <url>https://raw.github.com/goodow/maven/master/repositories/realtime/</url>
-    <snapshots>
-      <enabled>false</enabled>
     </snapshots>
   </repository>
 </repositories>
