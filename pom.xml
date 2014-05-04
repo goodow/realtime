@@ -347,7 +347,6 @@
     <module>realtime-operation</module>
     <module>realtime-search</module>
     <module>realtime-store</module>
-    <module>realtime-web-playground</module>
     <module>realtime-android-playground</module>
   </modules>
 </project>

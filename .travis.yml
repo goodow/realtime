@@ -1,5 +1,10 @@
 language: java
-before_install: wget -P target/travis https://raw.githubusercontent.com/goodow/maven/master/settings.xml
+
+before_install:
+- wget -P target/travis https://raw.githubusercontent.com/goodow/maven/master/settings.xml
+- cd realtime-channel && git submodule update --init -- realtime-android
+- cd ${TRAVIS_BUILD_DIR}
+
 script: '[ ${TRAVIS_PULL_REQUEST} = ''false'' ]
   && mvn clean deploy -pl :realtime-parent --settings target/travis/settings.xml
   || mvn clean verify -pl :realtime-parent --settings target/travis/settings.xml'
