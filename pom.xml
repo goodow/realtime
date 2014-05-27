@@ -343,9 +343,10 @@
   <modules>
     <module>realtime-json</module>
     <module>realtime-channel</module>
-    <module>realtime-channel/realtime-android</module>
+    <module>realtime-android</module>
     <module>realtime-operation</module>
     <module>realtime-search</module>
+    <module>realtime-auth</module>
     <module>realtime-store</module>
     <module>realtime-android-playground</module>
   </modules>

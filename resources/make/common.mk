@@ -22,9 +22,7 @@ TEST_GEN_DIR = $(GDREALTIME_DIR)/Classes/test_generated
 
 OCNI_SRC_DIR = $(CURDIR)/src/main/objectivec
 
-J2OBJC = $(J2OBJC_DIST)/j2objc -use-arc \
-  --prefixes $(ROOT_DIR)/resources/j2objc/package-prefixes.properties \
-  --mapping $(ROOT_DIR)/resources/j2objc/method-mappings.properties
+J2OBJC = $(J2OBJC_DIST)/j2objc -use-arc
   
 ifdef CONFIGURATION_BUILD_DIR
 # In Xcode build
