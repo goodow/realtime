@@ -25,11 +25,11 @@
     <!-- The directory where the module will be assembled - you can override this on the command line
     with -Dmods.directory=mydir -->
     <vertx.mods.directory>target/mods</vertx.mods.directory>
-    <vertx.version>2.1RC3</vertx.version>
+    <vertx.version>2.1</vertx.version>
     <jackson.version>2.3.1</jackson.version>
     <guice.version>4.0-beta</guice.version>
     <elasticsearch.version>1.1.1</elasticsearch.version>
-    <gwt.version>2.5.1</gwt.version>
+    <gwt.version>2.7.0-SNAPSHOT</gwt.version>
     <gae.version>1.8.3</gae.version>
     <android.platform.version>4.1.1.4</android.platform.version>
   </properties>
@@ -147,13 +147,7 @@
         <version>${gwt.version}</version>
         <scope>provided</scope>
       </dependency>
-      <dependency>
-        <groupId>com.goodow.gwt</groupId>
-        <artifactId>gwt-exporter</artifactId>
-        <version>${gwt.version}-SNAPSHOT</version>
-        <scope>provided</scope>
-      </dependency>
-      
+
       <!-- Guice -->
       <dependency>
         <groupId>com.google.inject</groupId>
@@ -297,15 +291,11 @@
           <version>3.9.0-rc.1</version>
           <extensions>true</extensions>
         </plugin>
-        <plugin>
-          <artifactId>maven-war-plugin</artifactId>
-          <version>2.4</version>
-        </plugin>
         <!-- The vert.x Maven plugin -->
         <plugin>
           <groupId>io.vertx</groupId>
           <artifactId>vertx-maven-plugin</artifactId>
-          <version>2.0.5-final</version>
+          <version>2.0.6-final</version>
           <!-- Make sure that the plugin uses the vert.x versions from this pom.xml not from its own pom.xml -->
           <dependencies>
             <dependency>
@@ -325,6 +315,28 @@
               <artifactId>vertx-hazelcast</artifactId>
               <version>${vertx.version}</version>
               <scope>compile</scope>
+            </dependency>
+          </dependencies>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>gwt-maven-plugin</artifactId>
+          <version>2.6.1</version>
+          <dependencies>
+            <dependency>
+              <groupId>com.google.gwt</groupId>
+              <artifactId>gwt-user</artifactId>
+              <version>${gwt.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>com.google.gwt</groupId>
+              <artifactId>gwt-dev</artifactId>
+              <version>${gwt.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>com.google.gwt</groupId>
+              <artifactId>gwt-codeserver</artifactId>
+              <version>${gwt.version}</version>
             </dependency>
           </dependencies>
         </plugin>
