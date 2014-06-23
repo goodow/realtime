@@ -10,12 +10,12 @@
 [submodule "realtime-search"]
   path = realtime-search
   url = https://github.com/goodow/realtime-search.git
-[submodule "realtime-auth"]
-  path = realtime-auth
-  url = https://github.com/goodow/realtime-auth.git
 [submodule "realtime-store"]
   path = realtime-store
   url = https://github.com/goodow/realtime-store.git
+[submodule "realtime-android"]
+  path = realtime-android
+  url = https://github.com/goodow/realtime-android.git
 
 [submodule "realtime-android-playground"]
   path = realtime-android-playground
@@ -23,6 +23,9 @@
 [submodule "realtime-web-playground"]
   path = realtime-web-playground
   url = https://github.com/goodow/realtime-web-playground.git
-[submodule "realtime-android"]
-	path = realtime-android
-	url = https://github.com/goodow/realtime-android.git
+[submodule "realtime-web-tasks"]
+  path = realtime-web-tasks
+  url = https://github.com/goodow/realtime-web-tasks.git
+[submodule "realtime-web-cube"]
+  path = realtime-web-cube
+  url = https://github.com/goodow/realtime-web-cube.git

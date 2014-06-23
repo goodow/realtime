@@ -7,18 +7,15 @@ ROOT_DIR = $(dir $(lastword $(MAKEFILE_LIST)))../..
 MAIN_SRC_DIR = $(CURDIR)/src/main/java
 MAIN_SOURCE_LIST = $(BUILD_DIR)/main.sources.list
 TEST_SOURCE_LIST = $(BUILD_DIR)/test.sources.list
-GEN_INCLUDE_DIR = $(GDREALTIME_DIR)/Classes/generated/include
 
-GDREALTIME_DIR = $(ROOT_DIR)/GDRealtime
-OPERATION_GEN_DIR = $(GDREALTIME_DIR)/Classes/generated/operation
-CHANNEL_GEN_DIR = $(GDREALTIME_DIR)/Classes/generated/channel
-STORE_GEN_DIR = $(GDREALTIME_DIR)/Classes/generated/store
-STORE_DIR = $(ROOT_DIR)/realtime-store
+STORE_DIR = $(ROOT_DIR)/realtime-store/GDStore
+OPERATION_GEN_DIR = $(STORE_DIR)/Classes/generated/operation
+STORE_GEN_DIR = $(STORE_DIR)/Classes/generated/store
 
 TEST_SRC_DIR = $(CURDIR)/src/test/java
 TEST_BIN = $(BUILD_DIR)/jre_unit_tests
 JUNIT_JAR = $(J2OBJC_DIST)/lib/junit-4.10.jar
-TEST_GEN_DIR = $(GDREALTIME_DIR)/Classes/test_generated
+TEST_GEN_DIR = $(STORE_DIR)/Classes/test_generated
 
 OCNI_SRC_DIR = $(CURDIR)/src/main/objectivec
 
