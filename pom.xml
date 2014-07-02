@@ -27,7 +27,7 @@
     <vertx.mods.directory>target/mods</vertx.mods.directory>
     <vertx.version>2.1.1</vertx.version>
     <jackson.version>2.3.1</jackson.version>
-    <guice.version>4.0-beta</guice.version>
+    <guice.version>4.0-beta4</guice.version>
     <elasticsearch.version>1.2.1</elasticsearch.version>
     <gwt.version>2.7.0-SNAPSHOT</gwt.version>
     <android.platform.version>4.1.1.4</android.platform.version>
@@ -160,19 +160,9 @@
         <version>${guice.version}</version>
       </dependency>
       <dependency>
-        <groupId>com.google.inject.extensions</groupId>
-        <artifactId>guice-assistedinject</artifactId>
-        <version>${guice.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.google.inject.extensions</groupId>
-        <artifactId>guice-persist</artifactId>
-        <version>${guice.version}</version>
-      </dependency>
-      <dependency>
         <groupId>com.goodow.vertx</groupId>
-        <artifactId>mod-guice</artifactId>
-        <version>1.0.0-beta1</version>
+        <artifactId>vertx-mod-guice</artifactId>
+        <version>1.0.0-beta4</version>
         <scope>provided</scope>
       </dependency>
       
