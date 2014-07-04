@@ -3,21 +3,6 @@ realtime [![Build Status](https://travis-ci.org/goodow/realtime.svg?branch=maste
 
 Google Docs–style collaboration via the use of operational transforms
 
+**Visit [Google groups](https://groups.google.com/forum/#!forum/goodow-realtime) for discussions and announcements.**
 
-You may need to put this in your pom.xml or maven user settings.xml:
-
-```xml
-<repositories>
-  <repository>
-    <id>sonatype-nexus-snapshots</id>
-    <name>Sonatype Nexus Snapshots</name>
-    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    <releases>
-      <enabled>false</enabled>
-    </releases>
-    <snapshots>
-      <enabled>true</enabled>
-    </snapshots>
-  </repository>
-</repositories>
-```
+**Check out the [playground live instance](http://realtimeplayground.goodow.com/).**
